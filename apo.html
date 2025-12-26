@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超級丞越阿波的網站</title>
+    <style>
+        /* --- 網站整體的樣式設定 --- */
+        body {
+            font-family: "微軟正黑體", "Microsoft JhengHei", Arial, sans-serif;
+            background-color: #f0f2f5; /* 淺灰色背景 */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- 標題區塊 --- */
+        header {
+            background: linear-gradient(135deg, #FFD700, #FF8C00); /* 金黃色到橘色的漸層 */
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 3.5rem; /* 標題文字大小 */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* 文字陰影增加立體感 */
+            letter-spacing: 2px;
+        }
+
+        /* --- 照片展示區塊 (主容器) --- */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto; /* 上下留白，左右置中 */
+            padding: 0 20px;
+        }
+
+        /* 使用 Grid 網格系統來排列照片 */
+        .gallery-grid {
+            display: grid;
+            /* 自動適應欄位：每張卡片至少 300px 寬，空間夠就自動增加欄位 */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px; /* 照片之間的間距 */
+        }
+
+        /* --- 每一張照片卡片的樣式 --- */
+        .photo-card {
+            background: white;
+            padding: 15px; /* 就像拍立得相片的白邊 */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease; /* 讓滑鼠移上去時有平滑動畫 */
+        }
+
+        /* 滑鼠移到卡片上時的效果 */
+        .photo-card:hover {
+            transform: translateY(-10px); /* 輕微浮起 */
+        }
+
+        /* --- 圖片本身的設定 --- */
+        .photo-card img {
+            width: 100%; /* 讓圖片填滿卡片寬度 */
+            height: auto; /* 高度自動維持比例 */
+            border-radius: 5px;
+            display: block;
+            object-fit: cover; /* 確保圖片填滿框架而不變形 */
+            aspect-ratio: 4 / 3; /* 設定圖片比例為 4:3，你可以依需求改為 1/1 (正方形) 或 16/9 */
+        }
+
+        /* --- 手機版稍微調整標題大小 --- */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>超級丞越阿波</h1>
+    </header>
+
+    <main class="container">
+        <div class="gallery-grid">
+            
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300?text=阿波照片+1(範例)" alt="超級丞越阿波照片">
+            </div>
+            
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300?text=阿波照片+2(範例)" alt="超級丞越阿波照片">
+            </div>
+            
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300?text=阿波照片+3(範例)" alt="超級丞越阿波照片">
+            </div>
+
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300?text=阿波照片+4(範例)" alt="超級丞越阿波照片">
+            </div>
+            
+             <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300?text=阿波照片+5(範例)" alt="超級丞越阿波照片">
+            </div>
+            
+            <div class="photo-card">
+                <img src="https://via.placeholder.com/400x300?text=阿波照片+6(範例)" alt="超級丞越阿波照片">
+            </div>
+
+            </div>
+    </main>
+
+</body>
+</html>
